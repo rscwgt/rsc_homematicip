@@ -11,20 +11,24 @@ import os
 
 import configparser
 import datetime
+import time
 import json
 import logging
-from pprint import pprint
+import pprint
 from homematicip.async.home import AsyncHome
 from homematicip.base.base_connection import HmipConnectionError
 from MqttClient import MqttClient
 from HmipPublishHandler import HmipPublishHandler
 
+#import config
+
+LOGGER = logging.getLogger()
+#LOGGER = logging.getLogger(__name__)
 
 class HmipClient:
     
-    logger = logging.getLogger()
-    
-    def __init__(self):    
+    def __init__(self):  
+        LOGGER.error("HmipClient")  
         self.readConfig()
         self.setup()
     
@@ -37,22 +41,16 @@ class HmipClient:
     def on_update_handler(self, data, event_type, obj):
         if obj:
             data['api_name'] = obj.__class__.__name__
-        now = datetime.datetime.now()
-        data['timestamp'] =now
-        print(now.strftime('%Y-%m-%d_%H-%M-%S'))
-        pprint(data)
-        pprint(self.mqtt_client)
+        now = time.time()
+        data['timestamp'] = now
+        LOGGER.debug(datetime.datetime.fromtimestamp(now).strftime('%Y-%m-%d_%H-%M-%S'))
+        LOGGER.debug(pprint.pformat(data))
         label = data['label'].replace(" ", "_")
-        sid = data['id'];
-        topic = "msgHomematicIp/" + event_type + "/" + label;
-        if data['api_name']:
-            topic += "/" + data['api_name']
-        payload = json.dumps(data)
-        self.mqtt_client.publish(topic, payload)
         obj_type = ''
         if obj:
             obj_type = obj.__class__.__name__
-        self.publishHandler.handle(self.mqtt_client, event_type, obj_type, label, data);
+#        sid = data['id'];
+        self.publishHandler.handle(event_type, obj_type, label, data);
         # save the data.
         #_file_name = '{}_{}.json'.format(obj.__class__.__name__,
         #                                 datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
@@ -60,34 +58,33 @@ class HmipClient:
         #with open(_full_path, 'w') as fl:
         #    json.dump(data, fl, indent=4)
 
-    async def get_home(self, loop):
-        self.logger.info("get_home")
-        home = AsyncHome(loop)
-        self.logger.debug("AuthToken="+self.hmip_authtoken)
-        self.logger.debug("AccessPoint="+self.hmip_accesspoint)
-        home.set_auth_token(self.hmip_authtoken)
-        await home.init(self.hmip_accesspoint)
-        self.logger.info("Home " + str(home))
-        return home
+    async def get_home(self):
+        LOGGER.info("get_home")
+        self.home = AsyncHome(self.loop)
+        LOGGER.debug("AuthToken="+self.hmip_authtoken)
+        LOGGER.debug("AccessPoint="+self.hmip_accesspoint)
+        self.home.set_auth_token(self.hmip_authtoken)
+        await self.home.init(self.hmip_accesspoint)
+        return self.home
     
     
-    async def update_state(self, home):
-        self.logger.info("update_state "+str(home))
-        await home.get_current_state()
-        self.logger.info("update_start success")
-        for d in home.devices:
-            print('{} {} {}'.format(d.id, d.label, str(d)))
-        for d in home.groups:
-            print('{} {} {}'.format(d.id, d.label, str(d)))
+    async def update_state(self):
+        LOGGER.info("update_state "+str(self.home))
+        await self.home.get_current_state()
+        LOGGER.info("update_start success")
+        for d in self.home.devices:
+            LOGGER.debug('{} {} {}'.format(d.id, d.label, str(d)))
+        for d in self.home.groups:
+            LOGGER.debug('{} {} {}'.format(d.id, d.label, str(d)))
     
     
-    async def wait_for_ws_incoming(self, home):
-        await home.get_current_state()
-        for d in home.devices:
+    async def wait_for_ws_incoming(self):
+        await self.home.get_current_state()
+        for d in self.home.devices:
             d.on_update(self.on_update_handler)
-        for d in home.groups:
+        for d in self.home.groups:
             d.on_update(self.on_update_handler)
-        reader = await home.enable_events()
+        reader = await self.home.enable_events()
         await reader
     
     def readConfiguration(self):
@@ -98,28 +95,27 @@ class HmipClient:
         self.loop = asyncio.get_event_loop()
         self.home = None
         try:
-            self.home = self.loop.run_until_complete(self.get_home(self.loop))
+            self.home = self.loop.run_until_complete(self.get_home())
             self.readConfiguration()
         except HmipConnectionError:
-            print("Problem connecting [1]")
+            LOGGER.error("Problem connecting [get home]")
         if self.home:   
             try:
-                self.loop.run_until_complete(self.update_state(self.home))
+                self.loop.run_until_complete(self.update_state())
             except HmipConnectionError:
-                print("Problem connecting [2]")
+                LOGGER.error("Problem connecting [update state]")
 #        loop.close()
-#        self.doLoop()
+#        self.doLoop(None)
         
 
     def doLoop(self, mqttClient):
         self.mqtt_client = mqttClient
-#        self.publishHandler = HmipPublishHandler(mqttClient)
-        print("HomematicIp Loop Start")
-        #loop = asyncio.get_event_loop()
+        self.publishHandler = HmipPublishHandler(mqttClient)
+        LOGGER.info("HomematicIp Loop Start")
         try:
-            self.loop.run_until_complete(self.wait_for_ws_incoming(self.home))
+            self.loop.run_until_complete(self.wait_for_ws_incoming())
         except HmipConnectionError:
-            print("Problem connecting [3]")
+            LOGGER.error("Problem connecting [incoming]")
         except KeyboardInterrupt:
             self.loop.run_until_complete(self.home.close_websocket_connection())
         print("HomematicIp Loop End")
