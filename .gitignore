@@ -1,0 +1,7 @@
+config.ini
+.settings/
+src/tests/json_data/
+src/__pycache__
+src/homematicip/__pycache__/
+src/homematicip/async/__pycache__/
+src/homematicip/base/__pycache__/

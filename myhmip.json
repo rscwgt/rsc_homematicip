@@ -1,0 +1,1060 @@
+{
+	"clients": {
+		"028a7867-188e-48a7-83d5-6d721a7a7464": {
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "028a7867-188e-48a7-83d5-6d721a7a7464",
+			"label": "HUAWEI NXT-L29",
+			"refreshToken": null
+		},
+		"1fcdd84e-d469-44ac-ab52-1322997a3702": {
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "1fcdd84e-d469-44ac-ab52-1322997a3702",
+			"label": "SM-G930F",
+			"refreshToken": null
+		},
+		"635bea40-1c43-4011-96fb-7b2987805562": {
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "635bea40-1c43-4011-96fb-7b2987805562",
+			"label": "homematicip-python",
+			"refreshToken": null
+		},
+		"adbd1a66-9614-4014-89a4-84fa14968a0d": {
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "adbd1a66-9614-4014-89a4-84fa14968a0d",
+			"label": "SM-T580",
+			"refreshToken": null
+		}
+	},
+	"devices": {
+		"3014F711A0000A1709AF5026": {
+			"automaticValveAdaptionNeeded": false,
+			"availableFirmwareVersion": "0.0.0",
+			"firmwareVersion": "2.0.2",
+			"functionalChannels": {
+				"0": {
+					"configPending": false,
+					"deviceId": "3014F711A0000A1709AF5026",
+					"dutyCycle": false,
+					"functionalChannelType": "DEVICE_OPERATIONLOCK",
+					"groupIndex": 0,
+					"groups": [
+						"48e26e27-1509-4987-8de6-94269a07aa54"
+					],
+					"index": 0,
+					"label": "",
+					"lowBat": false,
+					"operationLockActive": false,
+					"routerModuleEnabled": false,
+					"routerModuleSupported": false,
+					"rssiDeviceValue": -57,
+					"rssiPeerValue": -74,
+					"unreach": false
+				},
+				"1": {
+					"deviceId": "3014F711A0000A1709AF5026",
+					"functionalChannelType": "HEATING_THERMOSTAT_CHANNEL",
+					"groupIndex": 1,
+					"groups": [
+						"b54eeec9-8b52-4507-b98d-a9af56260fe1"
+					],
+					"index": 1,
+					"label": "",
+					"setPointTemperature": 20.0,
+					"temperatureOffset": 0.0,
+					"valvePosition": 0.06,
+					"valveState": "ADAPTION_DONE"
+				}
+			},
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3014F711A0000A1709AF5026",
+			"label": "Bad Heizk\u00f6rperthermostat",
+			"lastStatusUpdate": 1522569942808,
+			"manufacturerCode": 1,
+			"modelId": 295,
+			"modelType": "HmIP-eTRV-2",
+			"oem": "eQ-3",
+			"serializedGlobalTradeItemNumber": "3014F711A0000A1709AF5026",
+			"type": "HEATING_THERMOSTAT",
+			"updateState": "UP_TO_DATE"
+		},
+		"3014F711A0000A9709AEE9D8": {
+			"availableFirmwareVersion": "1.8.0",
+			"firmwareVersion": "1.8.0",
+			"functionalChannels": {
+				"0": {
+					"configPending": false,
+					"deviceId": "3014F711A0000A9709AEE9D8",
+					"dutyCycle": false,
+					"functionalChannelType": "DEVICE_OPERATIONLOCK",
+					"groupIndex": 0,
+					"groups": [
+						"48e26e27-1509-4987-8de6-94269a07aa54"
+					],
+					"index": 0,
+					"label": "",
+					"lowBat": false,
+					"operationLockActive": false,
+					"routerModuleEnabled": false,
+					"routerModuleSupported": false,
+					"rssiDeviceValue": -59,
+					"rssiPeerValue": -54,
+					"unreach": false
+				},
+				"1": {
+					"actualTemperature": 20.2,
+					"deviceId": "3014F711A0000A9709AEE9D8",
+					"display": "ACTUAL_HUMIDITY",
+					"functionalChannelType": "WALL_MOUNTED_THERMOSTAT_PRO_CHANNEL",
+					"groupIndex": 1,
+					"groups": [
+						"b54eeec9-8b52-4507-b98d-a9af56260fe1"
+					],
+					"humidity": 56,
+					"index": 1,
+					"label": "",
+					"setPointTemperature": 20.0,
+					"temperatureOffset": 0.0
+				}
+			},
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3014F711A0000A9709AEE9D8",
+			"label": "Bad Wandthermostat",
+			"lastStatusUpdate": 1522571273384,
+			"manufacturerCode": 1,
+			"modelId": 297,
+			"modelType": "HmIP-WTH-2",
+			"oem": "eQ-3",
+			"serializedGlobalTradeItemNumber": "3014F711A0000A9709AEE9D8",
+			"type": "WALL_MOUNTED_THERMOSTAT_PRO",
+			"updateState": "UP_TO_DATE"
+		},
+		"3014F711A000109709A8F51F": {
+			"availableFirmwareVersion": "1.16.10",
+			"firmwareVersion": "1.14.0",
+			"functionalChannels": {
+				"0": {
+					"configPending": false,
+					"deviceId": "3014F711A000109709A8F51F",
+					"dutyCycle": false,
+					"functionalChannelType": "DEVICE_SABOTAGE",
+					"groupIndex": 0,
+					"groups": [
+						"48e26e27-1509-4987-8de6-94269a07aa54",
+						"b52abd93-1896-4305-9d29-110e7db9431b"
+					],
+					"index": 0,
+					"label": "",
+					"lowBat": false,
+					"routerModuleEnabled": false,
+					"routerModuleSupported": false,
+					"rssiDeviceValue": -81,
+					"rssiPeerValue": null,
+					"sabotage": false,
+					"unreach": false
+				},
+				"1": {
+					"deviceId": "3014F711A000109709A8F51F",
+					"eventDelay": 0,
+					"functionalChannelType": "SHUTTER_CONTACT_CHANNEL",
+					"groupIndex": 1,
+					"groups": [
+						"b52abd93-1896-4305-9d29-110e7db9431b",
+						"b68686c3-86f4-4ecb-b99a-1f68a0765027",
+						"b54eeec9-8b52-4507-b98d-a9af56260fe1"
+					],
+					"index": 1,
+					"label": "",
+					"windowState": "CLOSED"
+				}
+			},
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3014F711A000109709A8F51F",
+			"label": "Bad Fenster- und T\u00fcrkontakt",
+			"lastStatusUpdate": 1522571336038,
+			"manufacturerCode": 1,
+			"modelId": 321,
+			"modelType": "HmIP-SWDO-I",
+			"oem": "eQ-3",
+			"serializedGlobalTradeItemNumber": "3014F711A000109709A8F51F",
+			"type": "SHUTTER_CONTACT_INVISIBLE",
+			"updateState": "TRANSFERING_UPDATE"
+		},
+		"3014F711A00011170999DB02": {
+			"availableFirmwareVersion": "1.4.10",
+			"firmwareVersion": "1.4.10",
+			"functionalChannels": {
+				"0": {
+					"configPending": false,
+					"deviceId": "3014F711A00011170999DB02",
+					"dutyCycle": false,
+					"functionalChannelType": "DEVICE_BASE",
+					"groupIndex": 0,
+					"groups": [
+						"48e26e27-1509-4987-8de6-94269a07aa54"
+					],
+					"index": 0,
+					"label": "",
+					"lowBat": null,
+					"routerModuleEnabled": false,
+					"routerModuleSupported": false,
+					"rssiDeviceValue": -74,
+					"rssiPeerValue": null,
+					"unreach": false
+				},
+				"1": {
+					"bottomToTopReferenceTime": 18.18,
+					"changeOverDelay": 0.5,
+					"delayCompensationValue": 12.7,
+					"deviceId": "3014F711A00011170999DB02",
+					"endpositionAutoDetectionEnabled": true,
+					"functionalChannelType": "SHUTTER_CHANNEL",
+					"groupIndex": 1,
+					"groups": [
+						"75bf0613-5b0d-4ad7-b85b-607fd88beef4",
+						"526516ca-d13a-449c-b29e-51697c74c96f",
+						"5fce45e2-fee4-4ace-ba17-12dcd520b467"
+					],
+					"index": 1,
+					"label": "",
+					"previousShutterLevel": null,
+					"processing": false,
+					"profileMode": "AUTOMATIC",
+					"selfCalibrationInProgress": null,
+					"shutterLevel": 0.0,
+					"supportingDelayCompensation": true,
+					"supportingEndpositionAutoDetection": true,
+					"supportingSelfCalibration": true,
+					"topToBottomReferenceTime": 16.78,
+					"userDesiredProfileMode": "AUTOMATIC"
+				}
+			},
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3014F711A00011170999DB02",
+			"label": "Bad Rollladen",
+			"lastStatusUpdate": 1522570027677,
+			"manufacturerCode": 1,
+			"modelId": 323,
+			"modelType": "HmIP-BROLL",
+			"oem": "eQ-3",
+			"serializedGlobalTradeItemNumber": "3014F711A00011170999DB02",
+			"type": "BRAND_SHUTTER",
+			"updateState": "UP_TO_DATE"
+		},
+		"3014F711A0001117099DB199": {
+			"availableFirmwareVersion": "1.4.10",
+			"firmwareVersion": "1.4.10",
+			"functionalChannels": {
+				"0": {
+					"configPending": false,
+					"deviceId": "3014F711A0001117099DB199",
+					"dutyCycle": false,
+					"functionalChannelType": "DEVICE_BASE",
+					"groupIndex": 0,
+					"groups": [
+						"176522f8-6419-4478-b57e-e837e5056d92"
+					],
+					"index": 0,
+					"label": "",
+					"lowBat": null,
+					"routerModuleEnabled": false,
+					"routerModuleSupported": false,
+					"rssiDeviceValue": -57,
+					"rssiPeerValue": null,
+					"unreach": false
+				},
+				"1": {
+					"bottomToTopReferenceTime": 26.98,
+					"changeOverDelay": 0.5,
+					"delayCompensationValue": 12.7,
+					"deviceId": "3014F711A0001117099DB199",
+					"endpositionAutoDetectionEnabled": true,
+					"functionalChannelType": "SHUTTER_CHANNEL",
+					"groupIndex": 1,
+					"groups": [
+						"75bf0613-5b0d-4ad7-b85b-607fd88beef4",
+						"1772189c-9801-490f-b59d-e6d78fe8d65e",
+						"78ddd19a-9e77-42f5-8bd8-2d0c18b85b38",
+						"3e42f8e0-05fc-455e-9435-66392d64a632"
+					],
+					"index": 1,
+					"label": "",
+					"previousShutterLevel": null,
+					"processing": false,
+					"profileMode": "AUTOMATIC",
+					"selfCalibrationInProgress": null,
+					"shutterLevel": 0.0,
+					"supportingDelayCompensation": true,
+					"supportingEndpositionAutoDetection": true,
+					"supportingSelfCalibration": true,
+					"topToBottomReferenceTime": 22.78,
+					"userDesiredProfileMode": "AUTOMATIC"
+				}
+			},
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3014F711A0001117099DB199",
+			"label": "Wz Rollladen Terrasse",
+			"lastStatusUpdate": 1522571047124,
+			"manufacturerCode": 1,
+			"modelId": 323,
+			"modelType": "HmIP-BROLL",
+			"oem": "eQ-3",
+			"serializedGlobalTradeItemNumber": "3014F711A0001117099DB199",
+			"type": "BRAND_SHUTTER",
+			"updateState": "UP_TO_DATE"
+		},
+		"3014F711A0001117099DB1D6": {
+			"availableFirmwareVersion": "1.4.10",
+			"firmwareVersion": "1.4.10",
+			"functionalChannels": {
+				"0": {
+					"configPending": false,
+					"deviceId": "3014F711A0001117099DB1D6",
+					"dutyCycle": false,
+					"functionalChannelType": "DEVICE_BASE",
+					"groupIndex": 0,
+					"groups": [
+						"176522f8-6419-4478-b57e-e837e5056d92"
+					],
+					"index": 0,
+					"label": "",
+					"lowBat": null,
+					"routerModuleEnabled": false,
+					"routerModuleSupported": false,
+					"rssiDeviceValue": -57,
+					"rssiPeerValue": -58,
+					"unreach": false
+				},
+				"1": {
+					"bottomToTopReferenceTime": 26.88,
+					"changeOverDelay": 0.5,
+					"delayCompensationValue": 12.7,
+					"deviceId": "3014F711A0001117099DB1D6",
+					"endpositionAutoDetectionEnabled": true,
+					"functionalChannelType": "SHUTTER_CHANNEL",
+					"groupIndex": 1,
+					"groups": [
+						"75a2c967-8de6-4fb6-b025-f49e91d7ac0a",
+						"75bf0613-5b0d-4ad7-b85b-607fd88beef4",
+						"1772189c-9801-490f-b59d-e6d78fe8d65e",
+						"78ddd19a-9e77-42f5-8bd8-2d0c18b85b38"
+					],
+					"index": 1,
+					"label": "",
+					"previousShutterLevel": null,
+					"processing": false,
+					"profileMode": "AUTOMATIC",
+					"selfCalibrationInProgress": null,
+					"shutterLevel": 0.0,
+					"supportingDelayCompensation": true,
+					"supportingEndpositionAutoDetection": true,
+					"supportingSelfCalibration": true,
+					"topToBottomReferenceTime": 23.48,
+					"userDesiredProfileMode": "AUTOMATIC"
+				}
+			},
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3014F711A0001117099DB1D6",
+			"label": "Wz Rollladen Stra\u00dfe",
+			"lastStatusUpdate": 1522568983672,
+			"manufacturerCode": 1,
+			"modelId": 323,
+			"modelType": "HmIP-BROLL",
+			"oem": "eQ-3",
+			"serializedGlobalTradeItemNumber": "3014F711A0001117099DB1D6",
+			"type": "BRAND_SHUTTER",
+			"updateState": "UP_TO_DATE"
+		}
+	},
+	"groups": {
+		"133d0cc9-3343-46fe-9cb0-d259542aaba2": {
+			"active": false,
+			"channels": [],
+			"configPending": false,
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "133d0cc9-3343-46fe-9cb0-d259542aaba2",
+			"ignorableDevices": [],
+			"label": "INTERNAL",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"motionDetected": null,
+			"presenceDetected": null,
+			"sabotage": null,
+			"silent": false,
+			"type": "SECURITY_ZONE",
+			"unreach": null,
+			"windowState": null,
+			"zoneAssignmentIndex": "ALARM_MODE_ZONE_3"
+		},
+		"176522f8-6419-4478-b57e-e837e5056d92": {
+			"channels": [{
+					"channelIndex": 0,
+					"deviceId": "3014F711A0001117099DB1D6"
+				}, {
+					"channelIndex": 0,
+					"deviceId": "3014F711A0001117099DB199"
+				}
+			],
+			"configPending": false,
+			"dutyCycle": false,
+			"groups": [
+				"1772189c-9801-490f-b59d-e6d78fe8d65e"
+			],
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "176522f8-6419-4478-b57e-e837e5056d92",
+			"label": "Wohnzimmer",
+			"lastStatusUpdate": 1522571047124,
+			"lowBat": null,
+			"metaGroupId": null,
+			"sabotage": null,
+			"type": "META",
+			"unreach": false
+		},
+		"1772189c-9801-490f-b59d-e6d78fe8d65e": {
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB199"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB1D6"
+				}
+			],
+			"dimLevel": null,
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "1772189c-9801-490f-b59d-e6d78fe8d65e",
+			"label": "Wohnzimmer",
+			"lastStatusUpdate": 1522571047124,
+			"lowBat": null,
+			"metaGroupId": "176522f8-6419-4478-b57e-e837e5056d92",
+			"on": null,
+			"processing": false,
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"type": "SWITCHING",
+			"unreach": false
+		},
+		"3e42f8e0-05fc-455e-9435-66392d64a632": {
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB199"
+				}
+			],
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "3e42f8e0-05fc-455e-9435-66392d64a632",
+			"label": "Rollladen Wohnzimmer Terrasse",
+			"lastStatusUpdate": 1522571047124,
+			"lowBat": null,
+			"metaGroupId": null,
+			"processing": false,
+			"profileId": "1ef4bee1-d30f-4744-bea0-2ce6c875cc1c",
+			"profileMode": "AUTOMATIC",
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"type": "SHUTTER_PROFILE",
+			"unreach": false
+		},
+		"48e26e27-1509-4987-8de6-94269a07aa54": {
+			"channels": [{
+					"channelIndex": 0,
+					"deviceId": "3014F711A000109709A8F51F"
+				}, {
+					"channelIndex": 0,
+					"deviceId": "3014F711A00011170999DB02"
+				}, {
+					"channelIndex": 0,
+					"deviceId": "3014F711A0000A1709AF5026"
+				}, {
+					"channelIndex": 0,
+					"deviceId": "3014F711A0000A9709AEE9D8"
+				}
+			],
+			"configPending": false,
+			"dutyCycle": false,
+			"groups": [
+				"5fce45e2-fee4-4ace-ba17-12dcd520b467",
+				"b68686c3-86f4-4ecb-b99a-1f68a0765027",
+				"b54eeec9-8b52-4507-b98d-a9af56260fe1"
+			],
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "48e26e27-1509-4987-8de6-94269a07aa54",
+			"label": "Bad",
+			"lastStatusUpdate": 1522571336038,
+			"lowBat": false,
+			"metaGroupId": null,
+			"sabotage": false,
+			"type": "META",
+			"unreach": false
+		},
+		"526516ca-d13a-449c-b29e-51697c74c96f": {
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A00011170999DB02"
+				}
+			],
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "526516ca-d13a-449c-b29e-51697c74c96f",
+			"label": "Rollladen Bad ",
+			"lastStatusUpdate": 1522570027677,
+			"lowBat": null,
+			"metaGroupId": null,
+			"processing": false,
+			"profileId": "26a53e26-f307-41bb-baea-6a47baa94d70",
+			"profileMode": "AUTOMATIC",
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"type": "SHUTTER_PROFILE",
+			"unreach": false
+		},
+		"5fce45e2-fee4-4ace-ba17-12dcd520b467": {
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A00011170999DB02"
+				}
+			],
+			"dimLevel": null,
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "5fce45e2-fee4-4ace-ba17-12dcd520b467",
+			"label": "Bad",
+			"lastStatusUpdate": 1522570027677,
+			"lowBat": null,
+			"metaGroupId": "48e26e27-1509-4987-8de6-94269a07aa54",
+			"on": null,
+			"processing": false,
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"type": "SWITCHING",
+			"unreach": false
+		},
+		"63211dc5-40e3-4619-b6f0-0fb184641a77": {
+			"channels": [],
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "63211dc5-40e3-4619-b6f0-0fb184641a77",
+			"label": "HEATING_DEHUMIDIFIER",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"type": "HEATING_DEHUMIDIFIER",
+			"unreach": null
+		},
+		"6ca16850-db4b-48d7-8df4-ec615ac8d5cb": {
+			"channels": [],
+			"dimLevel": null,
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "6ca16850-db4b-48d7-8df4-ec615ac8d5cb",
+			"label": "COMING_HOME",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"type": "LINKED_SWITCHING",
+			"unreach": null
+		},
+		"6efcec22-794a-4c02-bf46-dfa4510b6f53": {
+			"channels": [],
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "6efcec22-794a-4c02-bf46-dfa4510b6f53",
+			"label": "HEATING_EXTERNAL_CLOCK",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"type": "HEATING_EXTERNAL_CLOCK",
+			"unreach": null
+		},
+		"75a2c967-8de6-4fb6-b025-f49e91d7ac0a": {
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB1D6"
+				}
+			],
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "75a2c967-8de6-4fb6-b025-f49e91d7ac0a",
+			"label": "Rolladen Wohnzimmer Stra\u00dfe",
+			"lastStatusUpdate": 1522568983672,
+			"lowBat": null,
+			"metaGroupId": null,
+			"processing": false,
+			"profileId": "ec278e16-e18b-4b88-bf4c-b06053c91ce6",
+			"profileMode": "AUTOMATIC",
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"type": "SHUTTER_PROFILE",
+			"unreach": false
+		},
+		"75bf0613-5b0d-4ad7-b85b-607fd88beef4": {
+			"bottomShutterLevel": 1.0,
+			"bottomSlatsLevel": 1.0,
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB199"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB1D6"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A00011170999DB02"
+				}
+			],
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "75bf0613-5b0d-4ad7-b85b-607fd88beef4",
+			"label": "Wohnung",
+			"lastStatusUpdate": 1522571047124,
+			"lowBat": null,
+			"metaGroupId": null,
+			"processing": false,
+			"sensorSpecificParameters": {},
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"topShutterLevel": 0.0,
+			"topSlatsLevel": 0.0,
+			"type": "EXTENDED_LINKED_SHUTTER",
+			"unreach": false
+		},
+		"78ddd19a-9e77-42f5-8bd8-2d0c18b85b38": {
+			"bottomShutterLevel": 1.0,
+			"bottomSlatsLevel": 1.0,
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB199"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A0001117099DB1D6"
+				}
+			],
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "78ddd19a-9e77-42f5-8bd8-2d0c18b85b38",
+			"label": "Wohnzimmer",
+			"lastStatusUpdate": 1522571047124,
+			"lowBat": null,
+			"metaGroupId": null,
+			"processing": false,
+			"sensorSpecificParameters": {},
+			"shutterLevel": 0.0,
+			"slatsLevel": null,
+			"topShutterLevel": 0.0,
+			"topSlatsLevel": 0.0,
+			"type": "EXTENDED_LINKED_SHUTTER",
+			"unreach": false
+		},
+		"7e28e9c0-7e83-454d-9e44-a920cc6d3f68": {
+			"boilerFollowUpTime": 0,
+			"boilerLeadTime": 0,
+			"channels": [],
+			"dutyCycle": null,
+			"heatDemand": null,
+			"heatDemandRuleEnabled": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "7e28e9c0-7e83-454d-9e44-a920cc6d3f68",
+			"label": "HEATING_COOLING_DEMAND_BOILER",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"triggered": false,
+			"type": "HEATING_COOLING_DEMAND_BOILER",
+			"unreach": null
+		},
+		"8a9a9651-f6c7-43bc-b073-650a7105bb32": {
+			"channels": [],
+			"dutyCycle": null,
+			"heatDemand": null,
+			"heatDemandRuleEnabled": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "8a9a9651-f6c7-43bc-b073-650a7105bb32",
+			"label": "HEATING_COOLING_DEMAND_PUMP",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"pumpFollowUpTime": 2,
+			"pumpLeadTime": 2,
+			"pumpProtectionDuration": 1,
+			"pumpProtectionSwitchingInterval": 14,
+			"triggered": false,
+			"type": "HEATING_COOLING_DEMAND_PUMP",
+			"unreach": null
+		},
+		"93406bbc-e9f5-4143-9b94-7def4e5e5856": {
+			"channels": [],
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "93406bbc-e9f5-4143-9b94-7def4e5e5856",
+			"label": "HEATING_TEMPERATURE_LIMITER",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"type": "HEATING_TEMPERATURE_LIMITER",
+			"unreach": null
+		},
+		"96d2341a-3036-4312-8899-c191212da540": {
+			"channels": [],
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "96d2341a-3036-4312-8899-c191212da540",
+			"label": "HEATING_CHANGEOVER",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"type": "HEATING_CHANGEOVER",
+			"unreach": null
+		},
+		"a4c42347-10f7-471b-8bb4-8ed49c16aeec": {
+			"acousticFeedbackEnabled": true,
+			"channels": [],
+			"dimLevel": null,
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "a4c42347-10f7-471b-8bb4-8ed49c16aeec",
+			"label": "ALARM",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"onTime": 7200.0,
+			"signalAcoustic": "FREQUENCY_RISING",
+			"signalOptical": "DOUBLE_FLASHING_REPEATING",
+			"smokeDetectorAlarmType": null,
+			"type": "ALARM_SWITCHING",
+			"unreach": null
+		},
+		"a70e8bf4-488b-4dd9-b261-c334c1595d1f": {
+			"channels": [],
+			"dimLevel": null,
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "a70e8bf4-488b-4dd9-b261-c334c1595d1f",
+			"label": "PANIC",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": null,
+			"type": "LINKED_SWITCHING",
+			"unreach": null
+		},
+		"b52abd93-1896-4305-9d29-110e7db9431b": {
+			"active": false,
+			"channels": [{
+					"channelIndex": 0,
+					"deviceId": "3014F711A000109709A8F51F"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A000109709A8F51F"
+				}
+			],
+			"configPending": false,
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "b52abd93-1896-4305-9d29-110e7db9431b",
+			"ignorableDevices": [],
+			"label": "EXTERNAL",
+			"lastStatusUpdate": 1522571336038,
+			"lowBat": false,
+			"metaGroupId": null,
+			"motionDetected": null,
+			"presenceDetected": null,
+			"sabotage": false,
+			"silent": false,
+			"type": "SECURITY_ZONE",
+			"unreach": false,
+			"windowState": "CLOSED",
+			"zoneAssignmentIndex": "ALARM_MODE_ZONE_2"
+		},
+		"b54eeec9-8b52-4507-b98d-a9af56260fe1": {
+			"activeProfile": "PROFILE_2",
+			"actualTemperature": 20.2,
+			"boostDuration": 5,
+			"boostMode": false,
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A000109709A8F51F"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A0000A1709AF5026"
+				}, {
+					"channelIndex": 1,
+					"deviceId": "3014F711A0000A9709AEE9D8"
+				}
+			],
+			"controlMode": "AUTOMATIC",
+			"controllable": true,
+			"cooling": false,
+			"coolingAllowed": false,
+			"coolingIgnored": false,
+			"dutyCycle": false,
+			"ecoAllowed": true,
+			"ecoIgnored": false,
+			"externalClockCoolingTemperature": 23.0,
+			"externalClockEnabled": false,
+			"externalClockHeatingTemperature": 19.0,
+			"floorHeatingMode": "FLOOR_HEATING_STANDARD",
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"humidity": 56,
+			"humidityLimitEnabled": true,
+			"humidityLimitValue": 60,
+			"id": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+			"label": "Bad",
+			"lastStatusUpdate": 1522571336038,
+			"lowBat": false,
+			"maxTemperature": 30.0,
+			"metaGroupId": "48e26e27-1509-4987-8de6-94269a07aa54",
+			"minTemperature": 5.0,
+			"partyMode": false,
+			"profiles": {
+				"PROFILE_1": {
+					"enabled": true,
+					"groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+					"index": "PROFILE_1",
+					"name": "",
+					"profileId": "436d7560-0d1f-4142-9777-9314b3585ca8",
+					"visible": true
+				},
+				"PROFILE_2": {
+					"enabled": true,
+					"groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+					"index": "PROFILE_2",
+					"name": "",
+					"profileId": "8b7b85f8-de49-4228-9b9b-0ae1c27b9773",
+					"visible": true
+				},
+				"PROFILE_3": {
+					"enabled": true,
+					"groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+					"index": "PROFILE_3",
+					"name": "",
+					"profileId": "7a7f9c7d-c649-40e3-9f30-948aded5f46b",
+					"visible": false
+				},
+				"PROFILE_4": {
+					"enabled": true,
+					"groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+					"index": "PROFILE_4",
+					"name": "",
+					"profileId": "5d12555b-527f-4a98-838b-e604bd402a43",
+					"visible": true
+				},
+				"PROFILE_5": {
+					"enabled": true,
+					"groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+					"index": "PROFILE_5",
+					"name": "",
+					"profileId": "0b05730f-41de-46c7-96be-01eaa5cc119d",
+					"visible": true
+				},
+				"PROFILE_6": {
+					"enabled": true,
+					"groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1",
+					"index": "PROFILE_6",
+					"name": "",
+					"profileId": "f9d9d5a5-20dd-442a-84f5-9b502aa9484b",
+					"visible": false
+				}
+			},
+			"setPointTemperature": 20.0,
+			"type": "HEATING",
+			"unreach": false,
+			"valvePosition": 0.06,
+			"windowOpenTemperature": 12.0,
+			"windowState": "CLOSED"
+		},
+		"b68686c3-86f4-4ecb-b99a-1f68a0765027": {
+			"channels": [{
+					"channelIndex": 1,
+					"deviceId": "3014F711A000109709A8F51F"
+				}
+			],
+			"dutyCycle": false,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "b68686c3-86f4-4ecb-b99a-1f68a0765027",
+			"label": "Bad",
+			"lastStatusUpdate": 1522571336038,
+			"lowBat": false,
+			"metaGroupId": "48e26e27-1509-4987-8de6-94269a07aa54",
+			"motionDetected": null,
+			"presenceDetected": null,
+			"sabotage": false,
+			"smokeDetectorAlarmType": null,
+			"type": "SECURITY",
+			"unreach": false,
+			"windowState": "CLOSED"
+		},
+		"ba055e5c-d846-49d8-9979-849dc3bd92e7": {
+			"channels": [],
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "ba055e5c-d846-49d8-9979-849dc3bd92e7",
+			"label": "HEATING_HUMIDITY_LIMITER",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"type": "HEATING_HUMIDITY_LIMITER",
+			"unreach": null
+		},
+		"c6397674-6861-485a-8276-ffa3a9cc4853": {
+			"acousticFeedbackEnabled": true,
+			"channels": [],
+			"dimLevel": null,
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "c6397674-6861-485a-8276-ffa3a9cc4853",
+			"label": "SIREN",
+			"lastStatusUpdate": 0,
+			"lowBat": null,
+			"metaGroupId": null,
+			"on": false,
+			"onTime": 180.0,
+			"signalAcoustic": "FREQUENCY_RISING",
+			"signalOptical": "DOUBLE_FLASHING_REPEATING",
+			"smokeDetectorAlarmType": null,
+			"type": "ALARM_SWITCHING",
+			"unreach": null
+		},
+		"f4b5dc12-fdbc-4f41-8c7e-9038df4bbe42": {
+			"channels": [],
+			"dutyCycle": null,
+			"homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+			"id": "f4b5dc12-fdbc-4f41-8c7e-9038df4bbe42",
+			"label": "INBOX",
+			"lastStatusUpdate": 1522510299065,
+			"lowBat": null,
+			"metaGroupId": null,
+			"type": "INBOX",
+			"unreach": null
+		}
+	},
+	"home": {
+		"apExchangeClientId": null,
+		"apExchangeState": "NONE",
+		"availableAPVersion": "1.2.4",
+		"carrierSense": null,
+		"clients": [
+			"adbd1a66-9614-4014-89a4-84fa14968a0d",
+			"1fcdd84e-d469-44ac-ab52-1322997a3702",
+			"635bea40-1c43-4011-96fb-7b2987805562",
+			"028a7867-188e-48a7-83d5-6d721a7a7464"
+		],
+		"connected": true,
+		"currentAPVersion": "1.2.4",
+		"deviceUpdateStrategy": "MANUALLY",
+		"dutyCycle": 46.5,
+		"functionalHomes": {
+			"INDOOR_CLIMATE": {
+				"absenceEndTime": null,
+				"absenceType": "NOT_ABSENT",
+				"active": true,
+				"coolingEnabled": false,
+				"ecoDuration": "PERMANENT",
+				"ecoTemperature": 17.0,
+				"floorHeatingSpecificGroups": {
+					"HEATING_CHANGEOVER": "96d2341a-3036-4312-8899-c191212da540",
+					"HEATING_COOLING_DEMAND_BOILER": "7e28e9c0-7e83-454d-9e44-a920cc6d3f68",
+					"HEATING_COOLING_DEMAND_PUMP": "8a9a9651-f6c7-43bc-b073-650a7105bb32",
+					"HEATING_DEHUMIDIFIER": "63211dc5-40e3-4619-b6f0-0fb184641a77",
+					"HEATING_EXTERNAL_CLOCK": "6efcec22-794a-4c02-bf46-dfa4510b6f53",
+					"HEATING_HUMIDITY_LIMITER": "ba055e5c-d846-49d8-9979-849dc3bd92e7",
+					"HEATING_TEMPERATURE_LIMITER": "93406bbc-e9f5-4143-9b94-7def4e5e5856"
+				},
+				"functionalGroups": [
+					"b54eeec9-8b52-4507-b98d-a9af56260fe1"
+				],
+				"optimumStartStopEnabled": false,
+				"solution": "INDOOR_CLIMATE"
+			},
+			"LIGHT_AND_SHADOW": {
+				"active": true,
+				"extendedLinkedShutterGroups": [
+					"75bf0613-5b0d-4ad7-b85b-607fd88beef4",
+					"78ddd19a-9e77-42f5-8bd8-2d0c18b85b38"
+				],
+				"extendedLinkedSwitchingGroups": [],
+				"functionalGroups": [
+					"1772189c-9801-490f-b59d-e6d78fe8d65e",
+					"5fce45e2-fee4-4ace-ba17-12dcd520b467"
+				],
+				"shutterProfileGroups": [
+					"75a2c967-8de6-4fb6-b025-f49e91d7ac0a",
+					"526516ca-d13a-449c-b29e-51697c74c96f",
+					"3e42f8e0-05fc-455e-9435-66392d64a632"
+				],
+				"solution": "LIGHT_AND_SHADOW",
+				"switchingProfileGroups": []
+			},
+			"SECURITY_AND_ALARM": {
+				"activationInProgress": false,
+				"active": true,
+				"alarmActive": false,
+				"alarmEventDeviceId": null,
+				"alarmEventTimestamp": null,
+				"alarmSecurityJournalEntryType": null,
+				"functionalGroups": [
+					"b68686c3-86f4-4ecb-b99a-1f68a0765027"
+				],
+				"intrusionAlertThroughSmokeDetectors": false,
+				"securitySwitchingGroups": {
+					"ALARM": "a4c42347-10f7-471b-8bb4-8ed49c16aeec",
+					"COMING_HOME": "6ca16850-db4b-48d7-8df4-ec615ac8d5cb",
+					"PANIC": "a70e8bf4-488b-4dd9-b261-c334c1595d1f",
+					"SIREN": "c6397674-6861-485a-8276-ffa3a9cc4853"
+				},
+				"securityZoneActivationMode": "ACTIVATION_WITH_DEVICE_IGNORELIST",
+				"securityZones": {
+					"EXTERNAL": "b52abd93-1896-4305-9d29-110e7db9431b",
+					"INTERNAL": "133d0cc9-3343-46fe-9cb0-d259542aaba2"
+				},
+				"solution": "SECURITY_AND_ALARM",
+				"zoneActivationDelay": 0.0
+			},
+			"WEATHER_AND_ENVIRONMENT": {
+				"active": false,
+				"functionalGroups": [],
+				"solution": "WEATHER_AND_ENVIRONMENT"
+			}
+		},
+		"id": "de06b70f-6071-4fee-aad7-7f7e3e85451f",
+		"inboxGroup": "f4b5dc12-fdbc-4f41-8c7e-9038df4bbe42",
+		"lastReadyForUpdateTimestamp": 1522562345185,
+		"location": {
+			"city": "76356  Weingarten (Baden), Deutschland",
+			"latitude": "49.059471099999996",
+			"longitude": "8.5406131"
+		},
+		"metaGroups": [
+			"48e26e27-1509-4987-8de6-94269a07aa54",
+			"176522f8-6419-4478-b57e-e837e5056d92"
+		],
+		"pinAssigned": false,
+		"powerMeterCurrency": "EUR",
+		"powerMeterUnitPrice": 0.0,
+		"ruleGroups": [
+			"8a9a9651-f6c7-43bc-b073-650a7105bb32",
+			"7e28e9c0-7e83-454d-9e44-a920cc6d3f68"
+		],
+		"ruleMetaDatas": {},
+		"timeZoneId": "Europe/Berlin",
+		"updateState": "UP_TO_DATE",
+		"voiceControlSettings": {
+			"allowedActiveSecurityZoneIds": []
+		},
+		"weather": {
+			"humidity": 87,
+			"maxTemperature": 8.0,
+			"minTemperature": 6.0,
+			"temperature": 7.0,
+			"weatherCondition": "CLOUDY_WITH_RAIN",
+			"weatherDayTime": "DAY",
+			"windDirection": 210,
+			"windSpeed": 24.12
+		}
+	}
+}
