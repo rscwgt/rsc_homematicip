@@ -17,6 +17,60 @@ msgHomematicIp/GROUP_CHANGED/Wohnzimmer/MetaGroup
 msgHomematicIp/GROUP_CHANGED/Bad/AsyncHeatingGroup
 msgHomematicIp/DEVICE_CHANGED/Bad_Rollladen/AsyncFullFlushShutter
 
+msgHomematicIp/Bad_Wandthermostat/SetPointTemperature
+18.0
+
+msgHomematicIp/Bad_Wandthermostat/ActualTemperature
+20.3
+
+msgHomematicIp/Bad_Wandthermostat/Humidity
+44
+
+msgHomematicIp/Bad_Wandthermostat/LowBat
+False
+
+msgHomematicIp/Bad_Heizkörperthermostat/SetPointTemperature
+18.0
+
+msgHomematicIp/Bad_Heizkörperthermostat/LowBat
+False
+
+msgHomematicIp/Wz_Rollladen_Terrasse/ShutterLevel
+0.0
+
+msgHomematicIp/Wz_Rollladen_Terrasse/ProfileMode
+AUTOMATIC
+
+msgHomematicIp/Wz_Rollladen_Terrasse/UserDesiredProfileMode
+AUTOMATIC
+
+msgHomematicIp/Wz_Rollladen_Terrasse/LowBat
+Value fehlt. <<<---------
+
+msgHomematicIp/DEVICE_CHANGED/AsyncWallMountedThermostatPro/Bad_Wandthermostat
+{"type": "WALL_MOUNTED_THERMOSTAT_PRO", "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "lastStatusUpdate": 1523212771122, "firmwareVersion": "1.8.0", "modelType": "HmIP-WTH-2", "updateState": "UP_TO_DATE", "serializedGlobalTradeItemNumber": "3014F711A0000A9709AEE9D8", "timestamp": 1523212771.1474307, "id": "3014F711A0000A9709AEE9D8", "oem": "eQ-3", "modelId": 297, "api_name": "AsyncWallMountedThermostatPro", "availableFirmwareVersion": "1.8.0", "manufacturerCode": 1, "label": "Bad Wandthermostat", "functionalChannels": {"0": {"groupIndex": 0, "routerModuleEnabled": false, "configPending": false, "operationLockActive": false, "index": 0, "rssiPeerValue": -58, "rssiDeviceValue": -63, "deviceId": "3014F711A0000A9709AEE9D8", "routerModuleSupported": false, "dutyCycle": false, "label": "", "functionalChannelType": "DEVICE_OPERATIONLOCK", "unreach": false, "groups": ["48e26e27-1509-4987-8de6-94269a07aa54"], "lowBat": false}, "1": {"label": "", "temperatureOffset": 0.0, "functionalChannelType": "WALL_MOUNTED_THERMOSTAT_PRO_CHANNEL", "setPointTemperature": 18.0, "index": 1, "actualTemperature": 20.3, "groups": ["b54eeec9-8b52-4507-b98d-a9af56260fe1"], "deviceId": "3014F711A0000A9709AEE9D8", "display": "ACTUAL_HUMIDITY", "groupIndex": 1, "humidity": 44}}}
+
+msgHomematicIp/GROUP_CHANGED/MetaGroup/Bad
+{"type": "META", "configPending": false, "lastStatusUpdate": 1523212771122, "groups": ["5fce45e2-fee4-4ace-ba17-12dcd520b467", "b68686c3-86f4-4ecb-b99a-1f68a0765027", "b54eeec9-8b52-4507-b98d-a9af56260fe1"], "sabotage": false, "metaGroupId": null, "timestamp": 1523212771.1923742, "id": "48e26e27-1509-4987-8de6-94269a07aa54", "unreach": false, "dutyCycle": false, "api_name": "MetaGroup", "lowBat": false, "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "label": "Bad", "channels": [{"channelIndex": 0, "deviceId": "3014F711A000109709A8F51F"}, {"channelIndex": 0, "deviceId": "3014F711A00011170999DB02"}, {"channelIndex": 0, "deviceId": "3014F711A0000A1709AF5026"}, {"channelIndex": 0, "deviceId": "3014F711A0000A9709AEE9D8"}]}
+
+msgHomematicIp/GROUP_CHANGED/AsyncHeatingGroup/Bad
+{"type": "HEATING", "valvePosition": 0.0, "ecoIgnored": false, "activeProfile": "PROFILE_1", "windowOpenTemperature": 10.0, "api_name": "AsyncHeatingGroup", "externalClockEnabled": false, "boostMode": false, "metaGroupId": "48e26e27-1509-4987-8de6-94269a07aa54", "partyMode": false, "humidityLimitEnabled": true, "windowState": "CLOSED", "dutyCycle": false, "humidityLimitValue": 60, "externalClockCoolingTemperature": 23.0, "id": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "humidity": 44, "channels": [{"channelIndex": 1, "deviceId": "3014F711A000109709A8F51F"}, {"channelIndex": 1, "deviceId": "3014F711A0000A1709AF5026"}, {"channelIndex": 1, "deviceId": "3014F711A0000A9709AEE9D8"}], "coolingAllowed": false, "timestamp": 1523212771.2095098, "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "coolingIgnored": false, "lastStatusUpdate": 1523212771122, "cooling": false, "setPointTemperature": 18.0, "minTemperature": 5.0, "maxTemperature": 30.0, "boostDuration": 5, "ecoAllowed": true, "floorHeatingMode": "FLOOR_HEATING_STANDARD", "unreach": false, "controlMode": "AUTOMATIC", "actualTemperature": 20.3, "profiles": {"PROFILE_1": {"index": "PROFILE_1", "name": "", "enabled": true, "visible": true, "groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "profileId": "436d7560-0d1f-4142-9777-9314b3585ca8"}, "PROFILE_4": {"index": "PROFILE_4", "name": "", "enabled": true, "visible": true, "groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "profileId": "5d12555b-527f-4a98-838b-e604bd402a43"}, "PROFILE_6": {"index": "PROFILE_6", "name": "", "enabled": true, "visible": false, "groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "profileId": "f9d9d5a5-20dd-442a-84f5-9b502aa9484b"}, "PROFILE_5": {"index": "PROFILE_5", "name": "", "enabled": true, "visible": true, "groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "profileId": "0b05730f-41de-46c7-96be-01eaa5cc119d"}, "PROFILE_3": {"index": "PROFILE_3", "name": "", "enabled": true, "visible": false, "groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "profileId": "7a7f9c7d-c649-40e3-9f30-948aded5f46b"}, "PROFILE_2": {"index": "PROFILE_2", "name": "", "enabled": true, "visible": true, "groupId": "b54eeec9-8b52-4507-b98d-a9af56260fe1", "profileId": "8b7b85f8-de49-4228-9b9b-0ae1c27b9773"}}, "lowBat": false, "externalClockHeatingTemperature": 19.0, "label": "Bad", "controllable": true}
+
+msgHomematicIp/DEVICE_CHANGED/AsyncDevice/Terrasse_Temperatur-_und_Luftfeuchtigkeitssensor
+{"type": "TEMPERATURE_HUMIDITY_SENSOR_OUTDOOR", "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "lastStatusUpdate": 1523212896742, "firmwareVersion": "1.0.6", "modelType": "HmIP-STHO", "updateState": "UP_TO_DATE", "serializedGlobalTradeItemNumber": "3014F711A0000ED709AED3E7", "timestamp": 1523212896.766969, "id": "3014F711A0000ED709AED3E7", "oem": "eQ-3", "modelId": 314, "api_name": "AsyncDevice", "availableFirmwareVersion": "0.0.0", "manufacturerCode": 1, "label": "Terrasse Temperatur- und Luftfeuchtigkeitssensor", "functionalChannels": {"0": {"groupIndex": 0, "routerModuleEnabled": false, "configPending": null, "index": 0, "rssiPeerValue": null, "rssiDeviceValue": -67, "deviceId": "3014F711A0000ED709AED3E7", "routerModuleSupported": false, "dutyCycle": false, "label": "", "functionalChannelType": "DEVICE_BASE", "unreach": false, "groups": ["1a8b8e51-089d-42c8-a7a2-efac6d82e401"], "lowBat": false}, "1": {"label": "", "functionalChannelType": "CLIMATE_SENSOR_CHANNEL", "index": 1, "actualTemperature": 19.5, "groups": ["c45be67a-6fe8-4419-a1f3-b5140b76faaa"], "deviceId": "3014F711A0000ED709AED3E7", "humidity": 41, "groupIndex": 1}}}
+
+msgHomematicIp/GROUP_CHANGED/Group/Terrasse
+{"type": "ENVIRONMENT", "illumination": null, "lastStatusUpdate": 1523212896742, "raining": null, "metaGroupId": "1a8b8e51-089d-42c8-a7a2-efac6d82e401", "timestamp": 1523212896.7835524, "id": "c45be67a-6fe8-4419-a1f3-b5140b76faaa", "windSpeed": null, "unreach": false, "dutyCycle": false, "actualTemperature": 19.5, "api_name": "Group", "lowBat": false, "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "label": "Terrasse", "humidity": 41, "channels": [{"channelIndex": 1, "deviceId": "3014F711A0000ED709AED3E7"}]}
+
+msgHomematicIp/GROUP_CHANGED/MetaGroup/Terrasse
+{"type": "META", "configPending": false, "lastStatusUpdate": 1523212896742, "groups": ["c45be67a-6fe8-4419-a1f3-b5140b76faaa"], "sabotage": null, "metaGroupId": null, "timestamp": 1523212896.7990494, "id": "1a8b8e51-089d-42c8-a7a2-efac6d82e401", "unreach": false, "dutyCycle": false, "api_name": "MetaGroup", "lowBat": false, "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "label": "Terrasse", "channels": [{"channelIndex": 0, "deviceId": "3014F711A0000ED709AED3E7"}]}
+
+
+
+
+
+
+
 msgHomematicIp/DEVICE_CHANGED/Bad_Wandthermostat/AsyncWallMountedThermostatPro
 {"id": "3e42f8e0-05fc-455e-9435-66392d64a632", "homeId": "de06b70f-6071-4fee-aad7-7f7e3e85451f", "metaGroupId": null, "label": "Rollladen Wohnzimmer Terrasse", "lastStatusUpdate": 1522692192527, "unreach": false, "lowBat": null, "dutyCycle": false, "type": "SHUTTER_PROFILE", "channels": [{"deviceId": "3014F711A0001117099DB199", "channelIndex": 1}], "processing": false, "shutterLevel": 0.0, "slatsLevel": null, "profileId": "1ef4bee1-d30f-4744-bea0-2ce6c875cc1c", "profileMode": "AUTOMATIC", "api_name": "Group"}
 
