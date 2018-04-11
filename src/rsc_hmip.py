@@ -22,12 +22,12 @@ def main():
     hmip_client = HmipClient()
     print(hmip_client)
     
-#    mqtt_client = MqttClient()
-    mqtt_client = None
+    mqtt_client = MqttClient()
+#    mqtt_client = None
     t = Thread(target=hmip_client.doLoop, args=(mqtt_client, ))
     t.start()    
     
-#    mqtt_client.startLoop(hmip_client)
+    mqtt_client.startLoop(hmip_client)
 
 #    mqtt_client.publish("cmdHomematicIp/testMessage", "This is a test message")
     
