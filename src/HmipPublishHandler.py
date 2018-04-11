@@ -29,6 +29,17 @@ class HmipPublishHandler:
             { 'key': 'lowBat',                  'label': 'LowBat' }  
         ]
     
+    ThermometerItems = [
+            { 'key': 'humidity',                'label': 'Humidity' },  
+            { 'key': 'actualTemperature',       'label': 'ActualTemperature' },  
+            { 'key': 'lowBat',                  'label': 'LowBat' }  
+        ]
+    
+    ShutterContactItems = [
+            { 'key': 'windowState',             'label': 'WindowState' },  # OPEN, CLOSED
+            { 'key': 'lowBat',                  'label': 'LowBat' }  
+        ]
+    
     def __init__(self, mqtt_client): 
         self.mqttClient = mqtt_client
     
@@ -36,60 +47,106 @@ class HmipPublishHandler:
         self.logger.debug("publish -> topic <%s>" % topic)
         self.mqttClient.publish(topic, payload)
         
-    def publishPlain(self, event_type, object, key, value):
-        topic = self.topicMessage + "plain/" + object + '/' + key;
+    def publishPlain(self, event_type, name, key, value):
+        topic = self.topicMessage + "plain/" + name + '/' + key;
         payload = value
         self.publishMqtt(topic, payload)
 
     def handle(self, event_type, obj_type, label, data):
-        if self.isHeating(obj_type):
+        if self.isHeating(obj_type, data):
             self.handleAsHeatingObj(event_type, obj_type, label, data)
-            pass
-        elif self.isShutter(obj_type):
+        elif self.isShutter(obj_type, data):
             self.handleAsShutterObj(event_type, obj_type, label, data)
-            pass
+        elif self.isThermometer(obj_type, data):
+            self.handleAsThermometerObj(event_type, obj_type, label, data)
+        elif self.isShutterContact(obj_type, data):
+            self.handleAsShutterContactObj(event_type, obj_type, label, data)
         topic = self.topicMessage + event_type + "/" + obj_type + '/' + label;
         payload = json.dumps(data)
         self.publishMqtt(topic, payload)
         
+    def handleAsShutterContactObj(self, event_type, obj_type, label, data):
+        topic1 = self.topicMessage + label + '/'
+        for item in HmipPublishHandler.ShutterContactItems: 
+            if item['key'] in data:
+                subtopic = item['label']
+                topic = topic1 + subtopic
+                payload = data[item['key']]
+                self.publishPlain(event_type, label, subtopic, payload)
+            if 'functionalChannels' in data:
+                for idx in data['functionalChannels']:
+                    if item['key'] in data['functionalChannels'][idx]:
+                        subtopic = item['label']
+                        topic = topic1 + subtopic
+                        payload = data['functionalChannels'][idx][item['key']]
+                        self.publishPlain(event_type, label, subtopic, payload)
+
+    def handleAsThermometerObj(self, event_type, obj_type, label, data):
+        topic1 = self.topicMessage + label + '/'
+        for item in HmipPublishHandler.ThermometerItems: 
+            if item['key'] in data:
+                subtopic = item['label']
+                topic = topic1 + subtopic
+                payload = data[item['key']]
+                self.publishPlain(event_type, label, subtopic, payload)
+            if 'functionalChannels' in data:
+                for idx in data['functionalChannels']:
+                    if item['key'] in data['functionalChannels'][idx]:
+                        subtopic = item['label']
+                        topic = topic1 + subtopic
+                        payload = data['functionalChannels'][idx][item['key']]
+                        self.publishPlain(event_type, label, subtopic, payload)
+
     def handleAsHeatingObj(self, event_type, obj_type, label, data):
-#        topic1 = self.topicMessage + obj_type + '/' + label + '/'
         topic1 = self.topicMessage + label + '/'
         for item in HmipPublishHandler.HeatingItems: 
             if item['key'] in data:
-                topic = topic1 + item['label']
+                subtopic = item['label']
+                topic = topic1 + subtopic
                 payload = data[item['key']]
-                self.publishMqtt(topic, payload)
+                self.publishPlain(event_type, label, subtopic, payload)
             if 'functionalChannels' in data:
                 for idx in data['functionalChannels']:
                     if item['key'] in data['functionalChannels'][idx]:
-                        topic = topic1 + item['label']
+                        subtopic = item['label']
+                        topic = topic1 + subtopic
                         payload = data['functionalChannels'][idx][item['key']]
-                        self.publishMqtt(topic, payload)
+                        self.publishPlain(event_type, label, subtopic, payload)
                     
     def handleAsShutterObj(self, event_type, obj_type, label, data):
-#        topic1 = self.topicMessage + obj_type + '/' + label + '/'
         topic1 = self.topicMessage + label + '/'
         for item in HmipPublishHandler.ShutterItems: 
             if item['key'] in data:
-                topic = topic1 + item['label']
+                subtopic = item['label']
+                topic = topic1 + subtopic
                 payload = data[item['key']]
-                self.publishMqtt(topic, payload)
+                self.publishPlain(event_type, label, subtopic, payload)
             if 'functionalChannels' in data:
                 for idx in data['functionalChannels']:
                     if item['key'] in data['functionalChannels'][idx]:
-                        topic = topic1 + item['label']
+                        subtopic = item['label']
+                        topic = topic1 + subtopic
                         payload = data['functionalChannels'][idx][item['key']]
-                        self.publishMqtt(topic, payload)
+                        self.publishPlain(event_type, label, subtopic, payload)
                     
-    def isHeating(self, obj_type):
-        if "AsyncHeatingThermostat".lower() == obj_type.lower():
+    def isHeating(self, obj_type, data):
+        if data and data['type'] == "HEATING_THERMOSTAT":
             return True
-        if "AsyncWallMountedThermostatPro".lower() == obj_type.lower():
+        if data and data['type'] == "WALL_MOUNTED_THERMOSTAT_PRO":
             return True
         return False
     
-    def isShutter(self, obj_type):
-        if "AsyncFullFlushShutter".lower() == obj_type.lower():
+    def isShutter(self, obj_type, data):
+        if data and data['type'] == "BRAND_SHUTTER":
             return True
         return False
+    
+    def isThermometer(self, obj_type, data):
+        if data and data['type'] == "TEMPERATURE_HUMIDITY_SENSOR_OUTDOOR":
+            return True
+        return False
+    
+    def isShutterContact(self, obj_type, data):
+        if data and data['type'] == "SHUTTER_CONTACT_INVISIBLE":
+            return True
+        return False    
