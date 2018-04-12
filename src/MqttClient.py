@@ -24,7 +24,7 @@ class MqttClient:
     def on_connect(self, client, userdata, flags, rc):
         print("MQTT connected\n")
         client.subscribe(MqttClient.topic)
-        client.publish("cmdHomematicIp/testMessage", "This is a test message")
+ #       client.publish("cmdHomematicIp/testMessage", "This is a test message")
  
     
     def on_message(self, client, userdata, message):

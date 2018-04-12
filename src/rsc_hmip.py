@@ -20,6 +20,7 @@ def setup_logger():
 def main():
     logger.error("Starting...")
     hmip_client = HmipClient()
+    #hmip_client.readConfiguration()
     print(hmip_client)
     
     mqtt_client = MqttClient()
