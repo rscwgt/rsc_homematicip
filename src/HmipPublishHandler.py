@@ -7,10 +7,11 @@ Created on 05.04.2018
 import json
 import logging
 
+logger = logging.getLogger('HmipClient')
+
 class HmipPublishHandler:
     
     topicMessage = "msgHomematicIp/"
-    logger = logging.getLogger()
     
     HeatingItems = [  
             { 'key': 'setPointTemperature',     'label': 'SetPointTemperature' },  
@@ -44,7 +45,7 @@ class HmipPublishHandler:
         self.mqttClient = mqtt_client
     
     def publishMqtt(self, topic, payload):
-        self.logger.debug("publish -> topic <%s>" % topic)
+        logger.debug("publish -> topic <%s>" % topic)
         self.mqttClient.publish(topic, payload)
         
     def publishPlain(self, event_type, name, key, value):

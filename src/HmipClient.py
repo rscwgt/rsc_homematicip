@@ -23,21 +23,22 @@ from HmipPublishHandler import HmipPublishHandler
 
 #import config
 
-LOGGER = logging.getLogger()
+LOGGER = logging.getLogger('')
 #LOGGER = logging.getLogger(__name__)
 
 class HmipClient:
     
     def __init__(self):  
-        LOGGER.error("HmipClient")  
+        LOGGER.info("HmipClient initializing...")  
         self.readConfig()
         self.setup()
+        LOGGER.info("HmipClient initialized.")  
     
     def readConfig(self):
         config = configparser.ConfigParser()
         config.read('config.ini')
-        self.hmip_authtoken = config['AUTH']['authtoken']
-        self.hmip_accesspoint = config['AUTH']['accesspoint']
+        self.hmip_authtoken = config['HMIP_AUTH']['authtoken']
+        self.hmip_accesspoint = config['HMIP_AUTH']['accesspoint']
                 
     def on_update_handler(self, data, event_type, obj):
         if obj:

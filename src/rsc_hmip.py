@@ -18,7 +18,7 @@ def setup_logger():
 #    logging.config.fileConfig('logging.conf') #, defaults={'logfilename': '/var/log/rscHomematicIp/logging.log'})
 
 def main():
-    logger.error("Starting...")
+    logger.info("Starting...")
     hmip_client = HmipClient()
     #hmip_client.readConfiguration()
     print(hmip_client)
