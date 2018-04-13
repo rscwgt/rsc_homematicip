@@ -1,7 +1,7 @@
 '''
 Created on 28.03.2018
 
-@author: D057816
+@author: rsc
 '''
 
 from MqttClient import MqttClient

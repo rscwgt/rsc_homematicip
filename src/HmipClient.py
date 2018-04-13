@@ -1,7 +1,7 @@
 '''
 Created on 29.03.2018
 
-@author: D057816
+@author: rsc
 '''
 
 import asyncio

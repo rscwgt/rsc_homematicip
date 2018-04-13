@@ -1,7 +1,7 @@
 '''
 Created on 05.04.2018
 
-@author: D057816
+@author: rsc
 '''
 
 import json
