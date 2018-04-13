@@ -15,6 +15,7 @@ import time
 import json
 import logging
 import pprint
+from homematicip.group import *
 from homematicip.home import Home
 from homematicip.async.home import AsyncHome
 from homematicip.base.base_connection import HmipConnectionError
@@ -80,8 +81,9 @@ class HmipClient:
         LOGGER.info("update_start success")
         for d in self.async_home.devices:
             LOGGER.debug('{} {} {}'.format(d.id, d.label, str(d)))
-        for d in self.async_home.groups:
-            LOGGER.debug('{} {} {}'.format(d.id, d.label, str(d)))
+        for g in self.async_home.groups:
+            LOGGER.debug('{} {} {}'.format(g.id, g.label, str(g)))
+                
     
     
     async def wait_for_ws_incoming(self):
@@ -98,14 +100,32 @@ class HmipClient:
         LOGGER.debug("Devices:")
         for d in self.home.devices:
             LOGGER.debug('  {} {} {}'.format(d.id, d.label, str(d)))
-        LOGGER.debug("Devices:")
+        LOGGER.debug("Groups:")
         for g in self.home.groups:
             LOGGER.debug('  {} {} {}'.format(g.id, g.label, str(g)))
+        LOGGER.debug("Profiles:")
+        for g in self.home.groups:
             if hasattr(g, 'profiles'):
-                LOGGER.debug("Profiles for Group {}".format(g.label))
+                LOGGER.debug("  Profiles for Group {}".format(g.label))
                 for p in g.profiles:
                     p.get_details();
-                    LOGGER.debug("  {}".format(str(p)))
+                    LOGGER.debug("    name={} id={} groupId={} homeId={}".format(p.name, p.id, p.groupId, p.homeId))
+                    for day in p.profileDays:
+                        for period in p.profileDays[day].periods:
+                            if isinstance(period, HeatingCoolingPeriod):
+                                LOGGER.debug("    HeatingCoolingPeriod: Day={} start={} end={} value={}".format(day, period.starttime, period.endtime, period.value))
+                            elif isinstance(period, TimeProfilePeriod):
+                                LOGGER.debug("    TimeProfilePeriod: Day={} hour={} minute={} dimLevel={}".format(day, period.hour, period.minute, period.dimLevel))
+#                                     self.weekdays = []
+#        self.hour = 0
+#        self.minute = 0
+ #       self.astroOffset = 0
+ #       self.astroLimitationType = "NO_LIMITATION"  # NOT_EARLIER_THAN_TIME, NOT_LATER_THAN_TIME
+ #       self.switchTimeMode = "REGULAR_SWITCH_TIME"  # ASTRO_SUNRISE_SWITCH_TIME, ASTRO_SUNSET_SWITCH_TIME
+ #       self.dimLevel = 1.0
+ #       self.rampTime = 0
+                            else:
+                                LOGGER.debug("    Unknown: Day={} period={}".format(day, period))
 #        self.jsonConf = self.async_home.download_configuration()
 #        LOGGER.debug("Configuration: \n{}".format(self.jsonConf))
         
