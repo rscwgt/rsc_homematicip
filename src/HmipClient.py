@@ -46,7 +46,7 @@ class HmipClient:
             data['api_name'] = obj.__class__.__name__
         now = time.time()
         data['timestamp'] = now
-        LOGGER.debug(datetime.datetime.fromtimestamp(now).strftime('%Y-%m-%d_%H-%M-%S'))
+        LOGGER.debug(datetime.fromtimestamp(now).strftime('%Y-%m-%d_%H-%M-%S'))
         LOGGER.debug(pprint.pformat(data))
         label = data['label'].replace(" ", "_")
         obj_type = ''
